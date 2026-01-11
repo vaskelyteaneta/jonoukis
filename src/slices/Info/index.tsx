@@ -20,7 +20,7 @@ const Info: FC<InfoProps> = ({ slice }) => {
       <div className="max-w-4xl mx-auto">
         {slice.primary.text && (
           <div className="bg-white p-6 mb-6 rounded-lg shadow-sm">
-            <div className="info-slice-text prose max-w-none prose-p:text-black prose-headings:text-black prose-strong:text-black prose-em:text-black prose-a:text-black prose-li:text-black">
+            <div className="info-slice-text">
               <PrismicRichText field={slice.primary.text} />
             </div>
           </div>
