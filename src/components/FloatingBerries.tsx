@@ -1,17 +1,23 @@
 "use client";
 
 export default function FloatingBerries() {
-  const berries = Array.from({ length: 12 }, (_, i) => ({
-    id: i,
-    left: `${Math.random() * 100}%`,
-    top: `${Math.random() * 100}%`,
-    delay: `${Math.random() * 15}s`,
-    duration: `${10 + Math.random() * 10}s`,
-    size: `${30 + Math.random() * 30}px`,
-  }));
+  const berries = Array.from({ length: 15 }, (_, i) => {
+    const startX = Math.random() * 100;
+    const startY = Math.random() * 100;
+    return {
+      id: i,
+      left: `${startX}%`,
+      top: `${startY}%`,
+      delay: `${Math.random() * 20}s`,
+      duration: `${20 + Math.random() * 15}s`,
+      size: `${25 + Math.random() * 35}px`,
+      startX,
+      startY,
+    };
+  });
 
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+    <div className="fixed inset-0 overflow-hidden pointer-events-none" style={{ zIndex: 0 }}>
       {berries.map((berry) => (
         <div
           key={berry.id}
@@ -19,8 +25,8 @@ export default function FloatingBerries() {
           style={{
             left: berry.left,
             top: berry.top,
+            animation: `float ${berry.duration} ease-in-out infinite`,
             animationDelay: berry.delay,
-            animationDuration: berry.duration,
             width: berry.size,
             height: berry.size,
           }}

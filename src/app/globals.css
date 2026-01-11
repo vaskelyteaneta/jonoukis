@@ -31,14 +31,23 @@ body {
 }
 
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0px) translateX(0px) rotate(0deg);
+  0% {
+    transform: translate(0, 0) rotate(0deg);
   }
-  33% {
-    transform: translateY(-30px) translateX(20px) rotate(5deg);
+  20% {
+    transform: translate(30vw, -40vh) rotate(72deg);
   }
-  66% {
-    transform: translateY(-15px) translateX(-15px) rotate(-5deg);
+  40% {
+    transform: translate(-25vw, -60vh) rotate(144deg);
+  }
+  60% {
+    transform: translate(35vw, -30vh) rotate(216deg);
+  }
+  80% {
+    transform: translate(-20vw, -50vh) rotate(288deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
   }
 }
 
@@ -48,10 +57,9 @@ body {
   height: 40px;
   background: radial-gradient(circle at 30% 30%, #ff9500, #ff6b00);
   border-radius: 50% 40% 50% 40%;
-  opacity: 0.3;
+  opacity: 0.25;
   pointer-events: none;
   z-index: 0;
-  animation: float 15s ease-in-out infinite;
   box-shadow: 0 2px 8px rgba(255, 107, 0, 0.2);
 }
 
@@ -71,6 +79,11 @@ body {
 }
 
 main {
+  position: relative;
+  z-index: 1;
+}
+
+section {
   position: relative;
   z-index: 1;
 }
