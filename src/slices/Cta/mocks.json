@@ -1,0 +1,29 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Sunt occaecat laboris do non sit excepteur laborum aliqua ut velit pariatur veniam sint. Amet incididunt officia velit id occaecat incididunt. Nostrud Lorem elit tempor laborum Lorem deserunt nostrud."
+						}
+					}
+				]
+			},
+			"link": {
+				"__TYPE__": "LinkContent",
+				"key": "30449040-493d-4120-a540-533ef20b52df",
+				"value": {
+					"__TYPE__": "ExternalLink",
+					"url": "https://slicemachine.dev",
+					"text": "get"
+				}
+			}
+		},
+		"items": []
+	}
+]
