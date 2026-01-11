@@ -15,11 +15,13 @@ const Image: FC<ImageProps> = ({ slice }) => {
     <section
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="image-slice"
+      className="image-slice py-8 px-4"
     >
-      {slice.primary.image && (
-        <PrismicImage field={slice.primary.image} className="image-slice-image" />
-      )}
+      <div className="max-w-4xl mx-auto">
+        {slice.primary.image && (
+          <PrismicImage field={slice.primary.image} className="image-slice-image rounded-lg" />
+        )}
+      </div>
     </section>
   );
 };
