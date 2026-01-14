@@ -25,8 +25,18 @@ const Info: FC<InfoProps> = ({ slice }) => {
             </div>
           </div>
         )}
-        {slice.primary.image && (
-          <PrismicImage field={slice.primary.image} className="info-slice-image rounded-lg" />
+        {slice.items && slice.items.length > 0 && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {slice.items.map((item, index) => (
+              item.image && (
+                <PrismicImage 
+                  key={index}
+                  field={item.image} 
+                  className="info-slice-image rounded-lg w-full" 
+                />
+              )
+            ))}
+          </div>
         )}
       </div>
     </section>

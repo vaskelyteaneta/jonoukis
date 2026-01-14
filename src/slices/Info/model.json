@@ -20,17 +20,18 @@
             "allowTargetBlank": true,
             "multi": "paragraph"
           }
-        },
+        }
+      },
+      "items": {
         "image": {
           "type": "Image",
           "config": {
-            "label": "IMAGE",
+            "label": "Image",
             "constraint": {},
             "thumbnails": []
           }
         }
-      },
-      "items": {}
+      }
     }
   ]
 }
